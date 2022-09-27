@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 interface IProps {
   client: string;
@@ -8,14 +8,16 @@ interface IProps {
 export function GoogleAdsenseContainer(props: IProps) {
   const { client, slot } = props;
 
+  console.log("client", client);
+
   const loadAds = () => {
     try {
-      if (typeof window !== 'undefined') {
+      if (typeof window !== "undefined") {
         // @ts-ignore
         (window.adsbygoogle = window.adsbygoogle || []).push({});
       }
     } catch (error: any) {
-      console.log('adsense error', error.message);
+      console.log("adsense error", error.message);
     }
   };
   useEffect(() => {
@@ -23,10 +25,10 @@ export function GoogleAdsenseContainer(props: IProps) {
   }, []);
 
   return (
-    <div style={{ textAlign: 'left', overflow: 'hidden' }}>
+    <div style={{ textAlign: "left", overflow: "hidden" }}>
       <ins
         className="adsbygoogle"
-        style={{ display: 'block' }}
+        style={{ display: "block" }}
         data-ad-client={client}
         data-ad-slot={slot}
         data-ad-format="96"

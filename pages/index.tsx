@@ -14,12 +14,22 @@ const Home: NextPage = () => {
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1103570262283389"
-          // crossorigin="anonymous"
+          crossOrigin="anonymous"
         ></script>
       </Head>
+
+      <div className={styles.row}>
+        <div className={styles.body}>Lorem</div>
+        <div className={styles.side}>
+          <GoogleAdsenseContainer
+            client="ca-pub-1103570262283389"
+            slot="1884465413"
+          />
+        </div>
+      </div>
       <GoogleAdsenseContainer
         client="ca-pub-1103570262283389"
-        slot="3057112133"
+        slot="7069058074"
       />
       <footer className={styles.footer}>
         <a
